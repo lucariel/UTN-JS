@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ejemplo de código JavaScript en el propio documento</title>
+<script type="text/javascript">
+
+function calculoIVA(p){
+  document.write("Sin IVA: ")
+  document.write(p)
+  document.write("<br>")
+  document.write("Con IVA: ")
+  document.write(p*1.21)
+}
+
+</script>
+</head>
+<body>
+
+
+<input type="text" id='iva'></input>
+
+<button onclick="calculoIVA(getElementById('iva').value)">Calcula</button><br>
+
+<script type = "text/javascript">
+
+var pelicula = prompt("¿Cual es tu pelicula favorita?","");
+var edad = prompt("¿ Cuantos años tenes?","");
+var nombreDeMadre = prompt("¿Como se llama tu mama?","");
+var nombreDePadre = prompt("¿Como se llama tu papa?","");
+var nombre = prompt("¿Cual es tu nombre?","");
+
+document.write("tu pelicula favorita: " + pelicula)
+document.write("<br>")
+document.write("tu edad: " + edad)
+document.write("<br>")
+document.write("El nombre de tu madre: " + nombreDeMadre)
+document.write("<br>")
+document.write("El nombre de tu Padre: " + nombreDePadre)
+document.write("<br>")
+document.write("tu Nombre: " + nombre)
+
+</script>
+
+</body>
+</html>
