@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ejemplo de código JavaScript en el propio documento</title>
+
+
+</head>
+<body>
+<div id = "body">
+
+<button  id ="boton" onclick="mostrarImagen()">mostrar imagen</button><br>
+<button  id ="boton" onclick="eliminarImagen()">eliminar imagen</button><br>
+<button  id ="boton" onclick="elminarBotonera()">eliminar botonera</button><br>
+<div id = "idDiv"></div>
+
+</div>
+
+<script type = "text/javascript">
+
+
+
+
+function mostrarImagen(){
+
+  var parrafo = document.getElementById("idDiv");
+  var imagen = document.createElement("img");
+  imagen.setAttribute("src", "lotr.jpg");
+  imagen.setAttribute("id", "pic");
+  parrafo.appendChild(imagen);
+}
+
+function eliminarImagen(){
+  var parrafo = document.getElementById("idDiv");
+  var pic = document.getElementById("pic")
+  parrafo.removeChild(pic);
+}
+
+function elminarBotonera(){
+  var botones = document.getElementById("body");
+  document.body.removeChild(botones);
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
