@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+
+</head>
+<body>
+
+
+
+
+
+<div>
+    <p id="primerParrafo">La Donec ac lorem et tellus congue commodo. Pellentesque lobortis faucibus tincidunt.Phasellus tincidunt, ligula in euismod fermentum, quam ligula facilisis lacus, nec ultrices orci turpis ut lacus.Proin condimentum turpis ex, nec egestas mauris tincidunt ut. In laoreet turpis a finibus pharetra. Vivamus luctus tincidunt quam non mattis. Sed ac purus eu est gravida finibus vel vitae magna. Morbi nec velit tincidunt purus euismod placerat. Nullam quis quam in nisi dignissim</p>
+    <button onclick="mostrarOcultar(primerParrafo);" >mostrar/ocultar</button>
+    <p id= "segundoParrafo">Vivamus luctus lacinia nunc at auctor. Nullam maximus vulputate blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pretium odio non lacus mattis, ut faucibus orci pretium. Aliquam erat volutpat. Vestibulum ligula diam, sodales eu tellus ut, ornare fermentum nibh. Suspendisse potenti. Morbi sagittis lacinia diam vulputate scelerisque. Aenean porta ornare eros, eu commodo velit elementum a. Proin vel congue velit, eu aliquam mauris. Aenean id suscipit urna. </p>
+    <button onclick="mostrarOcultar(segundoParrafo);" >mostrar/ocultar</button>
+    <p id = "tercerParrafo">Nulla faucibus felis ut lacus euismod rhoncus. Nunc urna diam, sollicitudin a orci ac, accumsan ultricies urna. Duis euismod semper dui vel consequat. Nulla vulputate ultrices sapien, non scelerisque dui molestie non. Cras at pulvinar massa, vitae sollicitudin enim. Phasellus lacus lorem, gravida vel risus sed, suscipit mollis tellus. Curabitur rhoncus, purus quis dignissim tincidunt, enim leo congue nulla, nec accumsan risus erat id tortor. Proin id mollis magna. Nam id justo fermentum metus dictum dapibus. Fusce a suscipit lacus, sit amet faucibus nulla. Ut quis velit nisi. Phasellus in dolor et dui viverra accumsan at sed quam. </p>
+    <button onclick="mostrarOcultar(tercerParrafo);" >mostrar/ocultar</button>
+
+</div>
+<script>
+var estatus = false;
+var parrafo1 = document.getElementById("primerParrafo").innerHTML;
+var parrafo2 = document.getElementById("segundoParrafo").innerHTML;
+var parrafo3 = document.getElementById("tercerParrafo").innerHTML;
+var primerParrafo = "primerParrafo";
+var segundoParrafo = "segundoParrafo";
+var tercerParrafo = "tercerParrafo";
+
+
+function mostrarOcultar(parrafo)
+{
+
+    if (estatus == false) {
+      switch(parrafo){
+        case primerParrafo:
+          document.getElementById(parrafo).innerHTML=parrafo1;
+          break;
+        case segundoParrafo:
+        document.getElementById(parrafo).innerHTML=parrafo2;
+        break;
+        case tercerParrafo:
+        document.getElementById(parrafo).innerHTML=parrafo3;
+        break;
+
+      }
+
+        estatus = true;
+    } else if (estatus == true) {
+        document.getElementById(parrafo).innerHTML = "";
+
+        estatus = false;
+    }
+}
+</script>
+
+
+</body>
+</html>
