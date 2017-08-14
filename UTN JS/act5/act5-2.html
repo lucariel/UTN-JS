@@ -1,0 +1,57 @@
+<html>
+<head>
+<title></title>
+<script>
+
+function validacion(){
+    var validado = false;
+    var nombre = document.getElementById("nombre").value;
+    var ciudad = document.getElementById("ciudad").value;
+    var edad = document.getElementById("edad").selectedIndex;
+
+    if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)){
+      alert("Debe ingresar su nombre");
+    }
+    if(ciudad == null || ciudad.length == 0 || /^\s+$/.test(ciudad)){
+      alert("Debe ingresar su ciudad");
+    }
+    if( edad == null || edad == 0 ) {
+      alert("Debe ingresar su edad");
+    }
+    if(nombre.length>15){
+      alert("ERROR - SU NOMBRE NO PUEDE TENER MAS DE 15 CARACTERES")
+    }
+    else if (ciudad.length>15) {
+      alert("ERROR - SU CIUDAD NO PUEDE TENER MAS DE 15 CARACTERES")
+    }
+
+
+
+
+
+}
+
+
+</script>
+</head>
+<body>
+
+<form onsubmit="return validacion()">
+ Primer Nombre:<br>
+ <input type ="text" id = "nombre" ><br>
+ Ciudad<br>
+ <input type ="text" id ="ciudad"><br>
+ <select id="edad" name="opciones">
+   <option value="">- Selecciona un valor -</option>
+   <option value="1">menor a 15</option>
+   <option value="2">entre 15 y 18</option>
+   <option value="3">mayor de 18</option>
+ </select>
+ <input value ="validar" type="submit"><br>
+
+</form>
+
+
+<p id="lucas"></p>
+</body>
+</html>
