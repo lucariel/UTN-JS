@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css"
+		href='https://fonts.googleapis.com/css?family=Oswald'/>
+	</head>
+	<body style="background-color:black ">
+		<div id="fondo-blanco"></div>
+    <div><a href="fotos.html">FOTOS</a></div>
+    <div><a href="contacto.html">CONTACTO</a></div>
+    <div> <a href="index.html" >PORTADA	</a> <br>
+      <p></p>
+    <form onsubmit="return validacion()">
+     Nombre:<br>
+     <input type ="text" id = "nombre" ><br>
+     Ciudad:<br>
+     <input type ="text" id ="ciudad"><br>
+     <div> Edad:</div>
+     <select id="motivo" name="opciones">
+       <option value="">- Selecciona un motivo -</option>
+       <option value="1">Bares</option>
+       <option value="2">Fiesta de 15</option>
+       <option value="3">Casamientos</option>
+       <option value="4">Otros</option>
+     </select><br>
+     <input  id ="comentario" type="text" style="height:250px; width: 250px;" name="item" align="left" /><br>
+     <input value ="validar" type="submit"><br>
+
+    </form>
+    <script>
+
+    function validacion(){
+        var validado = false;
+        var nombre = document.getElementById("nombre").value;
+        var ciudad = document.getElementById("ciudad").value;
+        var motivo = document.getElementById("motivo").selectedIndex;
+        var comentario = document.getElementById("comentario").value;
+
+        if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)){
+          alert("Debe ingresar su nombre");
+        }
+        if(ciudad == null || ciudad.length == 0 || /^\s+$/.test(ciudad)){
+          alert("Debe ingresar su ciudad");
+        }
+        if( edad == null || edad == 0 ) {
+          alert("Debe ingresar su edad");
+        }
+        if(nombre.length>15){
+          alert("ERROR - SU NOMBRE NO PUEDE TENER MAS DE 15 CARACTERES")
+        }
+        else if (ciudad.length>15) {
+          alert("ERROR - SU CIUDAD NO PUEDE TENER MAS DE 15 CARACTERES")
+        }
+        else if(comentario.length>500){
+          alert("ERROR - SU CIUDAD NO PUEDE TENER MAS DE 500 CARACTERES, ahora tiene:"+comentario.length)
+        }
+
+
+
+
+
+    }
+
+
+    </script>
+
+
+
+	<body>
+</html>

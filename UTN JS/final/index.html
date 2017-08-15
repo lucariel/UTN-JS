@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css"
+		href='https://fonts.googleapis.com/css?family=Oswald'/>
+	</head>
+	<body style="background-color:black ">
+		<div id="fondo-blanco"></div>
+		<div class="">
+			<img class="imgs" src="lepifie.jpg"/>
+				<div><a href="fotos.html">FOTOS</a></div>
+				<div><a href="contacto.html">CONTACTO</a></div>
+				<div> <a href="#" onclick='mostrarOcultar();'> QUIENES SOMOS	</a> <br>
+					<p id="primerParrafo"></p>
+					<script>
+					var estatus = true;
+					var parrafo = "Somos una banda, o mejor dicho, un ensamble de varias cuerdas - hacemos desde el Ave Maria de Schubert hasta Charly Garcia - Tocamos en bares a la gorra o en eventos";
+					function mostrarOcultar()
+					{
+						if(estatus ==true){
+						document.getElementById("primerParrafo").innerHTML=parrafo;
+						estatus = false;
+					}
+					else if (estatus == false) {
+						document.getElementById("primerParrafo").innerHTML="";
+						estatus = true;
+					}
+
+
+					}
+
+					</script>
+				</div>
+		</div>
+
+
+
+	<body>
+</html>
